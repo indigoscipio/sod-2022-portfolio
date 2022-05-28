@@ -55,7 +55,7 @@ body {
 .container {
   display: grid;
   grid-column-gap: 2.4rem;
-  grid-template-rows: 100vh 30vh min-content 60vh 80vh min-content 60vh min-content 60vh 100vh;
+  grid-template-rows: 100vh 30vh min-content 60vh 80vh min-content 60vh min-content min-content 40vh;
   grid-template-columns: [full-bleed-start] 1fr [grid-inner-start] repeat(10, 1fr) [grid-inner-end] 1fr [full-bleed-end];
   padding-left: 7.2rem; }
 
@@ -82,11 +82,16 @@ ul {
   border: 0;
   background-color: #e2e8f0;
   color: #94a3b8;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.2s ease; }
+  .button:hover {
+    background-color: #d1dbe7; }
 
 .button-primary {
   background-color: #334155;
   color: #f8fafc; }
+  .button-primary:hover {
+    background-color: #202935; }
 
 .button-inline {
   cursor: pointer;
@@ -100,11 +105,14 @@ ul {
   font-weight: 300;
   letter-spacing: -0.1rem;
   color: #06b6d4; }
+  .button-inline:hover {
+    color: #058ba2; }
 
 .side-nav {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  z-index: 2; }
   .side-nav__logo {
     margin-top: 1.6rem;
     cursor: pointer; }
@@ -113,6 +121,34 @@ ul {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer; }
+    .side-nav__menu-icon #icon-close {
+      display: none; }
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #06b6d4;
+  z-index: 1;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: all 0.5s ease; }
+  .menu-container .menu-links {
+    text-align: center; }
+    .menu-container .menu-links .menu-item {
+      color: #f8fafc;
+      margin-bottom: 6.4rem;
+      transition: all 0.2s ease;
+      cursor: pointer; }
+      .menu-container .menu-links .menu-item:hover {
+        background-color: #334155;
+        padding: 1.6rem 6.4rem;
+        border-radius: 100px; }
+
+.menu-container.active {
+  transform: translateX(0%); }
 
 .hero {
   grid-column: grid-inner-start / grid-inner-end;
@@ -195,6 +231,7 @@ ul {
 
 .features {
   grid-column: 2/-2;
+  grid-gap: 6.4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
   .features__item {
@@ -212,7 +249,10 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .features__icon:hover img {
+      transform: scale(1.2); }
     .features__icon img {
+      transition: all 0.2s ease;
       width: 7.2rem; }
 
 .testimonials {
@@ -286,7 +326,9 @@ ul {
     overflow: hidden;
     width: 32rem;
     border-radius: 1rem;
-    box-shadow: 0 16px 32px rgba(57, 60, 63, 0.212); }
+    box-shadow: 0 8px 16px rgba(57, 60, 63, 0.1); }
+    .projects__card:hover {
+      box-shadow: 0 16px 32px rgba(57, 60, 63, 0.2); }
     .projects__card-thumbnail {
       height: 24rem;
       background-image: url(../Images/molecule-1.png);
@@ -385,7 +427,8 @@ ul {
 
 .contact-us {
   grid-column: 2/-2;
-  color: white; }
+  color: #f8fafc;
+  padding: 6.4rem 0; }
   .contact-us__container {
     padding: 8rem;
     background-color: #06b6d4;
@@ -428,8 +471,22 @@ ul {
     height: 2.4rem; }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.8rem;
+  padding: 6.4rem;
   grid-column: 1/-1;
-  background-color: green; }
+  background-color: #334155; }
+  .footer p {
+    color: #f8fafc; }
+  .footer .logo-dark {
+    width: 4.8rem; }
+  .footer .socials {
+    display: flex;
+    gap: 4.8rem; }
+  .footer .socials__link {
+    cursor: pointer; }
 
 .heading {
   font-weight: 300; }

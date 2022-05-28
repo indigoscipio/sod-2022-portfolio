@@ -8,12 +8,23 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <div class="menu-container">
+      <ul class="menu-links">
+        <li class="menu-item heading heading-1">Homepage</li>
+        <li class="menu-item heading heading-1">Portfolio</li>
+        <li class="menu-item heading heading-1">Amazing Stuff</li>
+        <li class="menu-item heading heading-1">Blog</li>
+        <li class="menu-item heading heading-1">Contact Me</li>
+      </ul>
+    </div>
+
     <div class="side-nav">
       <div class="side-nav__logo">
         <img src="SVGs/logo.svg" alt="" />
       </div>
       <div class="side-nav__menu-icon">
-        <img src="SVGs/main-menu.svg" alt="" />
+        <img id="icon-close" src="SVGs/main-menu-close.svg" alt="" />
+        <img id="icon-menu" src="SVGs/main-menu.svg" alt="" />
       </div>
     </div>
 
@@ -418,21 +429,20 @@
         </div>
       </section>
       <section class="footer">
-        <img src="SVGs/logo-dark.svg" alt="" />
+        <img class="logo-dark" src="SVGs/logo-dark.svg" alt="" />
         <p class="paragraph-18">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam
         </p>
-        <div class="socials">
-          <ul class="socials__link">
-            <li class="allcaps allcaps-12 socials__link-item">Twitter</li>
-            <li class="allcaps allcaps-12 socials__link-item">Facebook</li>
-            <li class="allcaps allcaps-12 socials__link-item">Instagram</li>
-            <li class="allcaps allcaps-12 socials__link-item">TikTok</li>
-          </ul>
-        </div>
+        <ul class="socials">
+          <li class="allcaps allcaps-12 socials__link">Twitter</li>
+          <li class="allcaps allcaps-12 socials__link">Facebook</li>
+          <li class="allcaps allcaps-12 socials__link">Instagram</li>
+          <li class="allcaps allcaps-12 socials__link">TikTok</li>
+        </ul>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
