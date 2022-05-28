@@ -95,7 +95,7 @@ body {
 .container {
   display: grid;
   grid-column-gap: 2.4rem;
-  grid-template-rows: 100vh 30vh min-content 60vh 80vh repeat(6, 1fr);
+  grid-template-rows: 100vh 30vh min-content 60vh 80vh min-content 60vh min-content 60vh 100vh;
   grid-template-columns:
     [full-bleed-start] 1fr [grid-inner-start] repeat(10, 1fr)
     [grid-inner-end] 1fr [full-bleed-end];
@@ -112,4 +112,42 @@ body {
 img {
   display: block;
   width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+//Components
+
+.button {
+  text-transform: uppercase;
+  border-radius: 100rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  font-family: inherit;
+  padding: 1.6rem 4.8rem;
+  border: 0;
+  background-color: $slate-30;
+  color: $slate-50;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: $slate-80;
+  color: $slate-10;
+}
+
+.button-inline {
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid $cyan-60;
+  background: none;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -0.1rem;
+  color: $cyan-60;
 }

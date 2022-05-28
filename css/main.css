@@ -55,7 +55,7 @@ body {
 .container {
   display: grid;
   grid-column-gap: 2.4rem;
-  grid-template-rows: 100vh 30vh min-content 60vh 80vh repeat(6, 1fr);
+  grid-template-rows: 100vh 30vh min-content 60vh 80vh min-content 60vh min-content 60vh 100vh;
   grid-template-columns: [full-bleed-start] 1fr [grid-inner-start] repeat(10, 1fr) [grid-inner-end] 1fr [full-bleed-end];
   padding-left: 7.2rem; }
 
@@ -68,6 +68,38 @@ body {
 img {
   display: block;
   width: 100%; }
+
+ul {
+  list-style-type: none; }
+
+.button {
+  text-transform: uppercase;
+  border-radius: 100rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  font-family: inherit;
+  padding: 1.6rem 4.8rem;
+  border: 0;
+  background-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: pointer; }
+
+.button-primary {
+  background-color: #334155;
+  color: #f8fafc; }
+
+.button-inline {
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #06b6d4;
+  background: none;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -0.1rem;
+  color: #06b6d4; }
 
 .side-nav {
   display: flex;
@@ -145,7 +177,6 @@ img {
   .benefits__item2-text {
     width: 70%; }
   .benefits__item2-list {
-    list-style: none;
     display: flex;
     gap: 4.8rem; }
     .benefits__item2-list li {
@@ -238,19 +269,163 @@ img {
 
 .projects {
   grid-column: 2/-2;
-  background-color: blue; }
+  padding: 9.6rem 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content 1fr; }
+  .projects h2 {
+    grid-column: 1/-1; }
+  .projects .button-inline {
+    grid-column: 1/-1;
+    margin-top: 6.4rem; }
+  .projects__card {
+    cursor: pointer;
+    margin: 0 1.6rem;
+    overflow: hidden;
+    width: 32rem;
+    border-radius: 1rem;
+    box-shadow: 0 16px 32px rgba(57, 60, 63, 0.212); }
+    .projects__card-thumbnail {
+      height: 24rem;
+      background-image: url(../Images/molecule-1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #cffafe;
+      position: relative; }
+      .projects__card-thumbnail .tag {
+        display: inline-block;
+        top: 1.6rem;
+        right: 1.6rem;
+        position: absolute;
+        background-color: #334155;
+        padding: 0.8rem;
+        border-radius: 100px; }
+    .projects__card-details {
+      padding: 3.2rem; }
+    .projects__card-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 1.6rem; }
+    .projects__card-list-item {
+      display: flex; }
+      .projects__card-list-item img {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 0.8rem; }
 
 .statistics {
+  color: #f8fafc;
   grid-column: 1/-1;
-  background-color: gray; }
+  background-color: #334155;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr); }
+  .statistics__col-left span {
+    color: #06b6d4; }
+  .statistics__col-right {
+    justify-self: start;
+    display: flex;
+    gap: 12.8rem; }
+  .statistics__metrics-item {
+    display: flex;
+    flex-direction: column; }
+    .statistics__metrics-item .largetext {
+      font-size: 12.8rem;
+      letter-spacing: -0.896rem;
+      font-weight: 300;
+      line-height: 1;
+      position: relative; }
+      .statistics__metrics-item .largetext .smalltext {
+        color: #06b6d4;
+        position: absolute;
+        font-size: 6.4rem;
+        letter-spacing: -0.448rem;
+        font-weight: 100; }
 
 .pricing {
+  padding: 9.6rem 0;
   grid-column: 2/-2;
-  background-color: blueviolet; }
+  display: flex;
+  flex-direction: column; }
+  .pricing h2 {
+    align-self: center; }
+  .pricing__card-container {
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    display: flex; }
+  .pricing__card {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    flex-direction: column;
+    border-radius: 2.4rem;
+    border: 1px solid #06b6d4;
+    width: 40rem;
+    padding: 4.8rem; }
+  .pricing__card.primary {
+    border: 0;
+    background-color: #ecfeff; }
+    .pricing__card.primary .button {
+      color: #334155;
+      background-color: #67e8f9; }
+  .pricing__benefits-list-item {
+    margin-bottom: 1.6rem;
+    align-items: center;
+    display: flex; }
+    .pricing__benefits-list-item img {
+      margin-right: 0.8rem;
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.4rem; }
 
 .contact-us {
   grid-column: 2/-2;
-  background-color: coral; }
+  color: white; }
+  .contact-us__container {
+    padding: 8rem;
+    background-color: #06b6d4;
+    border-radius: 2.4rem;
+    position: relative;
+    overflow: hidden; }
+  .contact-us__container-bg {
+    z-index: 0;
+    position: absolute;
+    right: -50%;
+    top: -50%;
+    width: 100%; }
+  .contact-us__form {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.2rem; }
+  .contact-us__form-item {
+    position: relative; }
+  .contact-us__form-input {
+    width: 32rem;
+    padding: 0.8rem;
+    font: inherit;
+    color: #f8fafc;
+    background-color: transparent;
+    padding: 0.8rem 0 0.8rem 3.2rem;
+    border: none;
+    border-bottom: 2px solid #f8fafc; }
+    .contact-us__form-input::-webkit-input-placeholder {
+      color: #f8fafc; }
+    .contact-us__form-input:focus {
+      outline: none; }
+  .contact-us__form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2.4rem;
+    height: 2.4rem; }
 
 .footer {
   grid-column: 1/-1;
@@ -301,19 +476,3 @@ img {
 .paragraph-16 {
   color: #334155;
   font-size: 1.6rem; }
-
-.button {
-  text-transform: uppercase;
-  border-radius: 100rem;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-  font-family: inherit;
-  padding: 1.6rem 4.8rem;
-  border: 0;
-  background-color: #e2e8f0;
-  color: #94a3b8;
-  cursor: pointer; }
-
-.button-primary {
-  background-color: #334155;
-  color: #f8fafc; }
