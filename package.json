@@ -1,0 +1,22 @@
+{
+  "name": "sod-2022-portfolio-v1",
+  "version": "1.0.0",
+  "description": "Portfolio Web Design Project",
+  "main": "script.js",
+  "scripts": {
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indigoscipio/sod-2022-portfolio-v1.git"
+  },
+  "author": "Samuel Oktavianus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indigoscipio/sod-2022-portfolio-v1/issues"
+  },
+  "homepage": "https://github.com/indigoscipio/sod-2022-portfolio-v1#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

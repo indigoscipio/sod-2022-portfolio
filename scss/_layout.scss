@@ -1,0 +1,269 @@
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    margin-top: 1.6rem;
+    cursor: pointer;
+  }
+
+  &__menu-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+//Hero
+.hero {
+  grid-column: grid-inner-start / grid-inner-end;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__image {
+    width: 100%;
+    transform-origin: center;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1) rotate(90deg);
+    }
+  }
+
+  &__text {
+    margin-right: 12.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cta-buttons {
+    display: flex;
+    gap: 1.6rem;
+  }
+}
+
+//Company Loog
+.company-logos {
+  grid-column: 1/-1;
+  background-color: $slate-10;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+
+  &__image {
+    width: 19.2rem;
+  }
+}
+
+//Benefits
+.benefits {
+  grid-column: 2/-2;
+  padding: 6.4rem 0;
+
+  &__item1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  &__item1-text {
+    margin-left: 12.8rem;
+    width: 70%;
+  }
+
+  &__item1-clients {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item1-profiles {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.2rem;
+
+    :not(:last-of-type) {
+      margin-right: -1.6rem;
+    }
+  }
+
+  &__item1-profile {
+    background-image: url(../Images/client1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 3.6rem;
+    border-radius: 50%;
+    height: 3.6rem;
+    border: 2px solid $slate-10;
+  }
+
+  &__item2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  &__item2-text {
+    width: 70%;
+  }
+  &__item2-list {
+    list-style: none;
+    display: flex;
+    gap: 4.8rem;
+
+    li {
+      position: relative;
+      margin-left: 2.4rem;
+
+      &::before {
+        content: "";
+        padding: 1.6rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        display: inline-block;
+        left: -3.2rem;
+        position: absolute;
+        background-image: url(../SVGs/checklist.svg);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+//Features
+.features {
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__item {
+    padding: 3.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: $cyan-10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 7.2rem;
+    }
+  }
+}
+
+//Testimonials
+.testimonials {
+  grid-column: 1/-1;
+  background-color: $cyan-60;
+  position: relative;
+
+  &__quote-bg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__slider-container {
+    padding: 3.2rem;
+    top: 50%;
+    left: 30%;
+    padding-right: 12.8rem;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
+  &__slider-item {
+    color: white;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__user-info {
+    h4 {
+      line-height: 1;
+    }
+  }
+
+  &__user-image {
+    width: 6.4rem;
+    height: 6.4rem;
+    background-color: $cyan-10;
+    border-radius: 50%;
+  }
+
+  .slider-indicators {
+    margin-top: 6.4rem;
+    display: flex;
+    gap: 2rem;
+
+    .slider-indicator {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $cyan-70;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slider-indicator.active {
+      background-color: $cyan-10;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -0.4rem;
+        left: -0.4rem;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid $cyan-10;
+      }
+    }
+  }
+}
+
+//Projects
+.projects {
+  grid-column: 2/-2;
+  background-color: blue;
+}
+
+//Statistics
+.statistics {
+  grid-column: 1/-1;
+  background-color: gray;
+}
+
+//Pricing
+.pricing {
+  grid-column: 2/-2;
+  background-color: blueviolet;
+}
+
+//contact us
+.contact-us {
+  grid-column: 2/-2;
+  background-color: coral;
+}
+
+//footer
+.footer {
+  grid-column: 1/-1;
+  background-color: green;
+}

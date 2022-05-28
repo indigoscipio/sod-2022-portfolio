@@ -1,0 +1,115 @@
+//Euclid Flex Light
+@font-face {
+  font-family: "Euclid Flex";
+  src: url(../Fonts/EuclidFlex-Light.otf);
+  font-weight: 100;
+}
+
+//Euclid Flex Regular
+@font-face {
+  font-family: "Euclid Flex";
+  src: url(../Fonts/EuclidFlex-Regular.otf);
+  font-weight: 200;
+}
+
+//Euclid Flex Medium
+@font-face {
+  font-family: "Euclid Flex";
+  src: url(../Fonts/EuclidFlex-Medium.otf);
+  font-weight: 300;
+}
+
+//Euclid Flex Semibold
+@font-face {
+  font-family: "Euclid Flex";
+  src: url(../Fonts/EuclidFlex-Semibold.otf);
+  font-weight: 400;
+}
+
+// Euclid Flex Bold
+@font-face {
+  font-family: "Euclid Flex";
+  src: url(../Fonts/EuclidFlex-Bold.otf);
+  font-weight: 500;
+}
+
+//Color Palette
+$slate-10: #f8fafc;
+$slate-20: #f1f5f9;
+$slate-30: #e2e8f0;
+$slate-40: #cbd5e1;
+$slate-50: #94a3b8;
+$slate-60: #64748b;
+$slate-70: #475569;
+$slate-80: #334155;
+$slate-90: #1e293b;
+$slate-100: #0f172a;
+
+$cyan-10: #ecfeff;
+$cyan-20: #cffafe;
+$cyan-30: #a5f3fc;
+$cyan-40: #67e8f9;
+$cyan-50: #22d3ee;
+$cyan-60: #06b6d4;
+$cyan-70: #0891b2;
+$cyan-80: #0e7490;
+$cyan-90: #155e75;
+$cyan-100: #164e63;
+
+//Margin & spacing
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+.mb-32 {
+  margin-bottom: 3.2rem;
+}
+.mb-48 {
+  margin-bottom: 4.8rem;
+}
+
+//CSS reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  color: $slate-80;
+  font-size: 1.8rem;
+  font-family: "Euclid Flex";
+  font-weight: 100;
+}
+
+.container {
+  display: grid;
+  grid-column-gap: 2.4rem;
+  grid-template-rows: 100vh 30vh min-content 60vh 80vh repeat(6, 1fr);
+  grid-template-columns:
+    [full-bleed-start] 1fr [grid-inner-start] repeat(10, 1fr)
+    [grid-inner-end] 1fr [full-bleed-end];
+  padding-left: 7.2rem;
+}
+
+.side-nav {
+  position: fixed;
+  height: 100vh;
+  width: 7.2rem;
+  background-color: $cyan-60;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
