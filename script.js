@@ -4,6 +4,7 @@ let btnContainer = document.querySelector(".side-nav__menu-icon");
 let menuContainer = document.querySelector(".menu-container");
 let sliderContainer = document.querySelector(".testimonials__slider-container");
 let sliderIndicators = document.querySelectorAll(".slider-indicator");
+let customPointer = document.querySelector(".custom-pointer");
 
 btnContainer.addEventListener("click", toggleMenu);
 

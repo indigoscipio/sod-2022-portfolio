@@ -64,7 +64,11 @@
   grid-column: grid-inner-start / grid-inner-end;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+
+  @media screen and (max-width: $bp-mobile) {
+    grid-column: full-bleed-start/full-bleed-end;
+  }
 
   &__image {
     width: 100%;
@@ -80,6 +84,10 @@
     margin-right: 12.8rem;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: $bp-mobile) {
+      margin-right: 0;
+    }
   }
 
   &__cta-buttons {
@@ -93,11 +101,12 @@
   grid-column: 1/-1;
   background-color: $slate-10;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: center;
   justify-items: center;
 
   &__image {
+    display: block;
     width: 19.2rem;
   }
 }
@@ -107,14 +116,26 @@
   grid-column: 2/-2;
   padding: 6.4rem 0;
 
+  @media screen and (max-width: $bp-mobile) {
+    grid-column: full-bleed-start / full-bleed-end;
+  }
+
   &__item1 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     align-items: center;
+    margin-bottom: 9.6rem;
   }
+
   &__item1-text {
     margin-left: 12.8rem;
     width: 70%;
+
+    @media screen and (max-width: $bp-mobile) {
+      width: 100%;
+      padding-top: 3.2rem;
+      margin-left: 0;
+    }
   }
 
   &__item1-clients {
@@ -144,13 +165,22 @@
 
   &__item2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     align-items: center;
+  }
+
+  &__item2-image {
+    margin-top: 6.4rem;
   }
 
   &__item2-text {
     width: 70%;
+
+    @media screen and (max-width: $bp-mobile) {
+      width: 100%;
+    }
   }
+
   &__item2-list {
     display: flex;
     gap: 4.8rem;
@@ -179,7 +209,12 @@
   grid-column: 2/-2;
   grid-gap: 6.4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+
+  @media screen and (max-width: $bp-mobile) {
+    padding: 6.4rem 0;
+    grid-gap: 2.4rem;
+  }
 
   &__item {
     padding: 3.2rem;
@@ -214,6 +249,7 @@
 
 //Testimonials
 .testimonials {
+  padding: 3.2rem;
   grid-column: 1/-1;
   background-color: $cyan-60;
   position: relative;
@@ -314,10 +350,15 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
   grid-template-rows: min-content 1fr;
+  grid-gap: 3.2rem;
+  @media screen and (max-width: $bp-mobile) {
+    grid-column: full-bleed-start / full-bleed-end;
+  }
 
   h2 {
+    text-align: center;
     grid-column: 1/-1;
   }
 
@@ -388,7 +429,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
 
   &__col-left {
     span {
@@ -399,6 +440,13 @@
     justify-self: start;
     display: flex;
     gap: 12.8rem;
+
+    @media screen and (max-width: $bp-mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 9.6rem;
+      width: 100%;
+    }
   }
 
   &__metrics-item {
@@ -439,6 +487,14 @@
     justify-content: center;
     gap: 2.4rem;
     display: flex;
+
+    @media screen and (max-width: $bp-mobile) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $bp-tablet-port) {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -476,6 +532,7 @@
 
 //contact us
 .contact-us {
+  display: grid;
   grid-column: 2/-2;
   color: $slate-10;
   padding: 6.4rem 0;
@@ -486,6 +543,10 @@
     border-radius: 2.4rem;
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: $bp-mobile) {
+      padding: 3.2rem;
+    }
   }
 
   &__container-bg {
@@ -502,6 +563,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3.2rem;
+
+    @media screen and (max-width: $bp-mobile) {
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    }
   }
 
   &__form-item {
@@ -541,6 +606,7 @@
   flex-direction: column;
   align-items: center;
   gap: 6.8rem;
+  text-align: center;
   padding: 6.4rem;
   grid-column: 1/-1;
   background-color: $slate-80;
@@ -556,6 +622,10 @@
   .socials {
     display: flex;
     gap: 4.8rem;
+
+    @media screen and (max-width: $bp-mobile) {
+      flex-direction: column;
+    }
   }
 
   .socials__link {

@@ -6,12 +6,22 @@
   font-size: 6.4rem;
   line-height: 1;
   letter-spacing: -0.448rem;
+
+  @media screen and (max-width: $bp-mobile) {
+    font-size: 4.8rem;
+    letter-spacing: -0.288rem;
+  }
 }
 
 .heading-2 {
   font-size: 4.8rem;
   line-height: 1;
   letter-spacing: -0.288rem;
+
+  @media screen and (max-width: $bp-mobile) {
+    font-size: 3.2rem;
+    letter-spacing: -0.128rem;
+  }
 }
 
 .heading-3 {
